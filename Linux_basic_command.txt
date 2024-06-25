@@ -1,0 +1,89 @@
+Common Terms :
+Folder -------> directory
+Administrator ------> root user
+Software ------> package
+File ------> file
+ 
+
+Linux directory :
+
+/root -- home directory for root user.
+/home -- home directory for other user.
+/boot -- it contains all bootable files for the system.
+/etc  -- it contains all configuration files of the system.
+/usr  -- by default softwares are install in this directory.
+/opt  -- optional software packages are installed here. 
+/bin  -- it contains all commands of all users including root user.
+/sbin -- it contains all commands of root user only.
+/dev  -- it contains devices files.
+
+commands :
+
+sudo su --> log in as root user.
+cat > demo1.txt --> create an file named demo1.txt.*use ctrl+d to exit from the file.
+ls --> to view all the existing directories and files inside the working directory.
+ls -a --> to view all the existing directories and files (including hidden) inside the working directory
+cat demo1.txt --> to read the content of demo1.txt.
+tac demo1.txt --> to view the content from bottom to top line sequence.
+cat >> demo1.txt --> to add new content on existing file but we can not edit old one.
+cat demo1.txt demo2.txt > democombine.txt --> create democombine.txt file and copy the contents of demo1.txt and demo2.txt files into democombine.txt file.(unic feature of cat command)
+vi demo1.txt --> to edit the file demo1.txt.*to save and exit from editor use esc then :wq or shift+z+z .
+       :w  -> to save
+       :q  -> to quit
+       :wq -> to save and quit
+       :q! -> to quit forcefuly with out save
+touch demo3.txt demo4.txt demo5.txt --> to create empty files.
+stat demo1.txt --> to view the time stamp of demo1.txt file.
+Time stamp :
+Access time -> last time when a file was accessed.
+Modify time -> last time when a file was modified.
+Change time -> last time when a file metadata was changed.
+touch demo1.txt --> to change all the time stamp of the existing file demo1.txt.(uniq feature)
+touch -a demo1.txt --> to change last access time of the existing file demo1.txt.(uniq feature)
+touch -m demo1.txt --> to change last modified time of the existing file demo1.txt.(uniq feature)
+
+mkdir dir1 dir2 dir3 --> to make directory.
+mkdir -p dir1/dir4/dir5 --> to make directory inside another directory.
+cd dir2 --> to change directory.
+cd .. --> to goto parrent directory.
+cd ../../.. --> it will execure cd.. command for 3 times.
+pwd --> to get to know my current working directory.
+cp demo1.txt demo2.txt --> copy the demo1 file and paste on demo2 file.
+mv demo1.txt dir1 --> cut the demo1 file from current directory and paste on dir1 directory.
+rmdir dir1 --> use to delete empty directory.
+rmdir -p dir1/dir4 --> to delete the both parrent and child directory.
+mv demo1 newdemo --> to rename the demo1 as newdemo.
+rm -rf demo2 --> it will delete the file demo2.
+
+hostname --> it will show system details.
+ifconfig , hostname -i --> to view the ip adress of the machine.
+cat /etc/os-release --> to view linux os version.
+yum install httpd -y --> to install apache server.
+yum remove httpd -y --> to uninstall apache server.
+yum update -y --> to update all the packages.
+yum update httpd --> to update apache sever.
+service httpd start --> to start apache service.
+service httpd status --> to check status.
+chkconfig httpd on --> httpd service will be on automaticaly when system is on.
+chkconfig httpd off --> httpd service will not be on automaticaly.
+yum list installed --> to view list of all installed packages.
+whoami --> to view user type.
+which docker --> to check any package(docker) is installed or not.
+tree --> to view the directory in tree form.
+grep root /etc/passwd --> to find 'root' keyword in the directory path '/etc/passwd'.
+sort demo1 --> it will sort the file line by line in alphabetical order.
+echo "messege" --> "messege" will be refecled to all the user who are using same machine.
+useradd arnab --> it will create user as arnab.
+cat /etc/passwd --> to see the users.
+groupadd kasmo --> to create group as kasmo.
+cat /etc/group --> to see the groups.
+gpasswd -a arnab kasmo --> to add single user in a group.
+gpasswd -M arnab,jit,subham,sajim kasmo --> to add multiple user in a group.
+ln demo1 backup1 --> it is used to create backup file.any change in main file will be reflected in backup file automatically.
+tar -cvf dirx.tar dir1 --> it is used to archive multiple files in one.here files inside dir1 will be combiled in dirx.tar file.
+gzip dirx.tar --> it is used create a zip file.ziped file will be shown as '.tar.gz' extension.
+gunzip dirx.tar.gz --> to unzip an zipped file.
+tar -xvf dirx.tar --> to untar an tared file.
+wget <url> --> use to download. 
+
+ 
